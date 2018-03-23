@@ -1,5 +1,12 @@
-$bg-color: pink;
+$Gdisplay: grid;
+$bg-color: #808080;
 
-body {
- background: $bg-color;
+body{
+  background: $bg-color;
+}
+
+.container {
+  display: $Gdisplay;
+  grid-template-columns: auto 50px;
+  grid-template-rows: minmax(50px, auto);
 }
