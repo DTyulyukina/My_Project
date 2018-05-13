@@ -1,12 +1,33 @@
 $Gdisplay: grid;
+$Fdisplay: flex;
 $bg-color: #808080;
 
 body{
-  background: $bg-color;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    background: #fff;
+}
+.header{
+  display: $Fdisplay;
+  
+  & .header-conteiner{
+    text-align: left;  
+    
+    .list-headers li{
+      list-style-type: none; 
+    }
+  }
 }
 
-.container {
-  display: $Gdisplay;
-  grid-template-columns: auto 50px;
-  grid-template-rows: minmax(50px, auto);
-}
+//@media screen and (max-width: 1199px){
+  
+  .container {
+    display: $Gdisplay;
+    grid-template-columns: auto 50px;
+    grid-template-rows: minmax(50px, auto);
+  }
+//} 
