@@ -1,33 +1,40 @@
 $Gdisplay: grid;
 $Fdisplay: flex;
+$Ldisplay: inline-flex;
 $bg-color: #808080;
 
 body{
-    color: #333;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 28px;
-    background: #fff;
-}
-.header{
-  display: $Fdisplay;
-  
-  & .header-conteiner{
-    text-align: left;  
-    
-    .list-headers li{
-      list-style-type: none; 
-    }
-  }
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+  background: #fff;
 }
 
-//@media screen and (max-width: 1199px){
-  
-  .container {
-    display: $Gdisplay;
-    grid-template-columns: auto 50px;
-    grid-template-rows: minmax(50px, auto);
+.header{ 
+  min-width: 100%;
+  min-height: 70px;
+
+  .one{margin-left:15px;
+  font-size: 18px}
+
+  .two{margin-left:20%;}
+
+  & .header-conteiner{ display: $Ldisplay;
+    display: -webkit-inline-flex;
+    align-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    order: -1;
+
+  .list-headers li{
+    display: $Ldisplay;
+    display: -webkit-inline-flex;
+    list-style-type: none;
+    -webkit-flex: 3 1 300px; 
+    -ms-flex:  3 1 300px;
+    margin-right:5%;}    
   }
-//} 
+}
