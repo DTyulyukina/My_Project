@@ -1,2 +1,7 @@
 body {
-  background: pink; }
+  background: #808080; }
+
+.container {
+  display: grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows: minmax(50px, auto); }
