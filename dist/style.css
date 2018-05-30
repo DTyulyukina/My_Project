@@ -1,7 +1,40 @@
 body {
+<<<<<<< HEAD
   background: #808080; }
 
 .container {
   display: grid;
   grid-template-columns: auto 50px;
   grid-template-rows: minmax(50px, auto); }
+=======
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+  background: #fff; }
+
+.header {
+  min-width: 100%;
+  min-height: 70px; }
+  .header .one {
+    margin-left: 15px;
+    font-size: 18px; }
+  .header .two {
+    margin-left: 20%; }
+  .header .header-conteiner {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    align-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    order: -1; }
+    .header .header-conteiner .list-headers li {
+      display: inline-flex;
+      display: -webkit-inline-flex;
+      list-style-type: none;
+      -webkit-flex: 3 1 300px;
+      -ms-flex: 3 1 300px;
+      margin-right: 5%; }
+>>>>>>> f4d42cc2848f19326a4e2cb21deac81ef7fbaed5
