@@ -1,40 +1,57 @@
 body {
-<<<<<<< HEAD
-  background: #808080; }
-
-.container {
-  display: grid;
-  grid-template-columns: auto 50px;
-  grid-template-rows: minmax(50px, auto); }
-=======
-  color: #333;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-style: normal;
   font-size: 14px;
-  font-weight: normal;
-  line-height: 28px;
-  background: #fff; }
+  background: linear-gradient(to right, #FF7259, #FEC356); }
+
+.content {
+  grid-area: content;
+  height: 500px;
+  padding: 10px;
+  margin-top: 10px; }
+
+.footer {
+  grid-area: footer; }
 
 .header {
-  min-width: 100%;
-  min-height: 70px; }
-  .header .one {
-    margin-left: 15px;
-    font-size: 18px; }
-  .header .two {
-    margin-left: 20%; }
-  .header .header-conteiner {
+  min-height: 70px;
+  grid-area: header;
+  font-variant: small-caps;
+  font-stretch: ultra-expanded;
+  font-weight: 100; }
+  .header .first {
+    margin: 0 0 0 10px;
+    padding: 20px;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 160px;
+    text-shadow: grey 0 0 2px; }
+
+.header,
+.menu {
+  background: rgba(255, 255, 255, 0.07);
+  height: 70px; }
+
+.container {
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 70px repeat(2, auto);
+  grid-template-areas: "header menu" "content content" "footer footer"; }
+
+.menu {
+  grid-area: menu; }
+  .menu .list-headers li {
     display: inline-flex;
     display: -webkit-inline-flex;
+    list-style-type: none;
+    -webkit-flex: 3 1 300px;
+    -ms-flex: 3 1 300px;
+    margin: 0 10px;
+    padding: 10px; }
+  .menu .header-conteiner {
+    display: flex;
     align-content: flex-end;
     align-items: center;
     flex-direction: row-reverse;
     order: -1; }
-    .header .header-conteiner .list-headers li {
-      display: inline-flex;
-      display: -webkit-inline-flex;
-      list-style-type: none;
-      -webkit-flex: 3 1 300px;
-      -ms-flex: 3 1 300px;
-      margin-right: 5%; }
->>>>>>> f4d42cc2848f19326a4e2cb21deac81ef7fbaed5

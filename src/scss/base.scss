@@ -5,17 +5,16 @@ $LGdisplay: inline-grid;
 $bg-color: #808080;
 
 body{
-  color: #333;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-style: normal;
   font-size: 14px;
-  font-weight: normal;
-  line-height: 28px;
-  background: #fff;
+  background: linear-gradient(to right, #FF7259, #FEC356);
 }
 .content{
-  grid-area: content;
-  height: 500px;
+   grid-area: content;
+   height: 500px;
+   padding: 10px;
+   margin-top: 10px;
 }
 .footer{
   grid-area: footer;
@@ -23,15 +22,27 @@ body{
 .header{ 
   min-height: 70px;
   grid-area: header;
+  font-variant: small-caps;
+  font-stretch: ultra-expanded;
+  font-weight: 100;
 
-  .one{
-    margin: 10px 0 40px 0;
-    font-size: 18px;} 
+  .first{
+    margin: 0 0 0 10px;
+    padding: 20px;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 160px;
+    text-shadow: grey 0 0 2px;} 
+}
+.header, 
+.menu{
+  background: rgba(255,255,255,0.07);
+  height: 70px;
 }
 .container{
   display: $LGdisplay;
   width: 100%;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 20% 80%;
   grid-template-rows: 70px repeat(2, auto);
   grid-template-areas: 
     "header menu"
@@ -40,21 +51,21 @@ body{
 }
 
 .menu{ 
-  grid-area: menu;  
-  .list-headers li{
-    display: $Ldisplay;
-    display: -webkit-inline-flex;
-    list-style-type: none;
-    -webkit-flex: 3 1 300px; 
-    -ms-flex:  3 1 300px;
-    margin: 0 10px;} 
-    
-   & .header-conteiner { 
-    display: $Ldisplay;
-    display: -webkit-inline-flex;
-    align-content: flex-end;
-    align-items: center;
-    flex-direction: row-reverse;
-    order: -1;
-  }
+  grid-area: menu; 
+    .list-headers li{
+      display: $Ldisplay;
+      display: -webkit-inline-flex;
+      list-style-type: none;
+      -webkit-flex: 3 1 300px; 
+      -ms-flex:  3 1 300px;
+      margin: 0 10px;
+      padding: 10px;} 
+      
+     & .header-conteiner { 
+      display: $Fdisplay;
+      align-content: flex-end;
+      align-items: center;
+      flex-direction: row-reverse;
+      order: -1;
+    }
 }
