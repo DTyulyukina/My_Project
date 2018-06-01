@@ -27,8 +27,9 @@ body {
   width: 100%;
   grid-template-columns: 20% 80%;
   grid-template-rows: 70px repeat(2, auto);
-  grid-template-areas: "header menu" "content content" "footer footer";
-  padding: 15px 10px; }
+  grid-template-areas: "header menu"
+ "content content"
+ "footer footer";}
 
 .menu {
   grid-area: menu; }
