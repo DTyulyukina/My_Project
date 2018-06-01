@@ -4,15 +4,6 @@ body {
   font-size: 14px;
   background: linear-gradient(to right, #FF7259, #FEC356); }
 
-.content {
-  grid-area: content;
-  height: 500px;
-  padding: 10px;
-  margin-top: 10px; }
-
-.footer {
-  grid-area: footer; }
-
 .header {
   min-height: 70px;
   grid-area: header;
@@ -20,12 +11,11 @@ body {
   font-stretch: ultra-expanded;
   font-weight: 100; }
   .header .first {
-    margin: 0 0 0 10px;
-    padding: 20px;
-    font-size: 26px;
+    padding: 18px;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.1);
-    width: 160px;
-    text-shadow: grey 0 0 2px; }
+    width: 185px;
+    text-shadow: #696969 0 0 2px; }
 
 .header,
 .menu {
@@ -37,7 +27,8 @@ body {
   width: 100%;
   grid-template-columns: 20% 80%;
   grid-template-rows: 70px repeat(2, auto);
-  grid-template-areas: "header menu" "content content" "footer footer"; }
+  grid-template-areas: "header menu" "content content" "footer footer";
+  padding: 15px 10px; }
 
 .menu {
   grid-area: menu; }
@@ -55,3 +46,27 @@ body {
     align-items: center;
     flex-direction: row-reverse;
     order: -1; }
+
+.content {
+  grid-area: content;
+  height: 500px;
+  padding: 10px;
+  margin: 10px;
+  display: inline-flex;
+  display: -webkit-inline-flex; }
+  .content .days .day {
+    padding: 20px;
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    font-style: italic; }
+    .content .days .day #number-day {
+      font-size: 46px;
+      padding: 10px; }
+    .content .days .day #day-of-week {
+      font-size: 16px;
+      text-transform: capitalize; }
+    .content .days .day .attr-day {
+      padding: 10px; }
+
+.footer {
+  grid-area: footer; }

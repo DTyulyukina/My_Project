@@ -10,15 +10,6 @@ body{
   font-size: 14px;
   background: linear-gradient(to right, #FF7259, #FEC356);
 }
-.content{
-   grid-area: content;
-   height: 500px;
-   padding: 10px;
-   margin-top: 10px;
-}
-.footer{
-  grid-area: footer;
-}
 .header{ 
   min-height: 70px;
   grid-area: header;
@@ -27,12 +18,11 @@ body{
   font-weight: 100;
 
   .first{
-    margin: 0 0 0 10px;
-    padding: 20px;
-    font-size: 26px;
+    padding: 18px;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.1);
-    width: 160px;
-    text-shadow: grey 0 0 2px;} 
+    width: 185px;
+    text-shadow: #696969 0 0 2px;} 
 }
 .header, 
 .menu{
@@ -48,6 +38,7 @@ body{
     "header menu"
     "content content"
     "footer footer";
+  padding: 15px 10px;
 }
 
 .menu{ 
@@ -68,4 +59,38 @@ body{
       flex-direction: row-reverse;
       order: -1;
     }
+}
+.content{
+   grid-area: content;
+   height: 500px;
+   padding: 10px;
+   margin: 10px;
+   display: $Ldisplay;
+   display: -webkit-inline-flex;
+
+  .days{
+
+    .day{
+      padding: 20px;
+      display: $Ldisplay;
+      display: -webkit-inline-flex;
+      font-style: italic;
+
+        #number-day{
+        font-size: 46px;
+        padding: 10px;}
+
+        #day-of-week{
+        font-size: 16px;
+        text-transform: capitalize;}
+
+        .attr-day{
+        padding: 10px;}
+
+    }
+
+  }
+}
+.footer{
+  grid-area: footer;
 }
