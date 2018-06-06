@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Ежедневник</title>
-        <link rel='stylesheet' href='dist/style.css'>
+        <my-app>Загрузка...</my-app>
     </head>
     <body>    
       <div class="container">
@@ -31,14 +31,16 @@
                   <div id="month-day">Май</div>
                 </div>
             </div>
-            <div id="hours">  
+            <div class="month">
             </div>
           </div>
-          <div class="month">
+          <div id="hours">  
           </div>
         </div>
-        <div class="footer"><my-app>Загрузка...</my-app></div>
+        <div class="footer"></div>
       </div> 
-    <script type="text/javascript" src="dist/bundle.js"></script>
+
+      <script type="text/javascript" src="dist/polyfills.js"></script>
+      <script type="text/javascript" src="dist/app.js"></script>
     </body>
 </html>
