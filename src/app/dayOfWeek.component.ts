@@ -10,6 +10,6 @@ export class DayOfWeek{
   @ViewChild(DateToday) private dateToday: DateToday;
   dayOfweek = this.dateToday;
   constructor() {
-    console.log(`Day of week is ${this.dateToday}`);
+    console.log(`Day of week is ${this.dayOfweek}`);
   }
 }
