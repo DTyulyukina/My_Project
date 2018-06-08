@@ -1,12 +1,16 @@
 import { NgModule }        from '@angular/core';
 import { BrowserModule }   from '@angular/platform-browser';
 import { FormsModule }     from '@angular/forms';
-import { AppComponent }    from './app.component';
+import { DateToday }       from './dateToday.component';
+import { MounthToday }     from './mounthToday.component';
+import { DayOfWeek }       from './dayOfWeek.component';
+import { DayOfYear }       from './dayOfYear.component';
+import                     '../scss/base.scss';
 
 @NgModule({
     imports:      [ BrowserModule, FormsModule ],
-    declarations: [ AppComponent ],
-    bootstrap:    [ AppComponent ],
+    declarations: [ DateToday, MounthToday, DayOfWeek, DayOfYear ],
+    bootstrap:    [ DateToday, MounthToday, DayOfWeek, DayOfYear],
 })
 
 export class AppModule {}
