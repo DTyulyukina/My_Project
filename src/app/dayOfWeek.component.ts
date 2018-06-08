@@ -1,14 +1,15 @@
-import { Component, ContentChild}  from '@angular/core';
+import { Component, ViewChild}  from '@angular/core';
 import { DateToday}             from './dateToday.component';
      
 @Component({ 
   selector: 'day-of-week',
   template: `{{dayOfweek | date : 'EEEE' }}`
 })
+
 export class DayOfWeek{
-  @ContentChild(DateToday) private dateToday:DateToday;
-  dayOfweek = this.dateToday.today.toLocaleDateString('ru-RU');
+  @ViewChild(DateToday) private dateToday: DateToday;
+  dayOfweek = this.dateToday;
   constructor() {
-    console.log(`new - jokeViewChild is ${this.dateToday.today}`);
+    console.log(`Day of week is ${this.dateToday}`);
   }
 }

@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   template: `{{today | date: 'dd' }}`
 })
 export class DateToday{ 
-  today = new Date();
+  today = new Date().toLocaleDateString('ru-RU');
 }
