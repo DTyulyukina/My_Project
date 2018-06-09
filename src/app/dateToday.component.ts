@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component,  Injectable} from '@angular/core';
+import { NowToday} from './NowToday';
      
 @Component({ 
   selector: 'number-day',
-  template: `{{today | date: 'dd' }}`
+  template: `{{ day | date: 'dd' }}`
 })
+
+@Injectable()
 export class DateToday{ 
-  today = new Date().toLocaleDateString('ru-RU');
+  constructor(private _date: NowToday) {
+      day = this._date.today;
+  }
 }
+

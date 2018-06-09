@@ -1,5 +1,4 @@
-import { Component, ViewChild}  from '@angular/core';
-import { DateToday}             from './dateToday.component';
+import { Component }  from '@angular/core';
      
 @Component({ 
   selector: 'day-of-week',
@@ -7,9 +6,5 @@ import { DateToday}             from './dateToday.component';
 })
 
 export class DayOfWeek{
-  @ViewChild(DateToday) private dateToday: DateToday;
-  dayOfweek = this.dateToday;
-  constructor() {
-    console.log(`Day of week is ${this.dayOfweek}`);
-  }
+  today = Date.now();
 }
