@@ -8,8 +8,9 @@ import { NowToday} from './NowToday';
 
 @Injectable()
 export class DateToday{ 
+  day: Date;
   constructor(private _date: NowToday) {
-      day = this._date.today;
+      this.day = this._date.today;
   }
 }
 
