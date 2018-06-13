@@ -69,7 +69,7 @@ body{
 
   .days{
 
-    .day{
+    day{
       padding: 20px;
       display: $Ldisplay;
       display: -webkit-inline-flex;
@@ -86,7 +86,7 @@ body{
         #year-day{
         font-size: 18px;}
 
-        .attr-day{
+        #attr-day{
         padding: 10px;}
 
     }
