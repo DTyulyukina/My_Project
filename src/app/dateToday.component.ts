@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
              </div>`
 })
 export class DateToday{ 
-  day     = new Date().toLocaleDateString("ru", {day:     'numeric'});
-  weekday = new Date().toLocaleDateString("ru", {weekday: 'long'});
-  month   = new Date().toLocaleDateString("ru", {month:   'long'});
-  year    = new Date().toLocaleDateString("ru", {year:    'numeric'});
+  today: Date = new Date();
+  day     = this.today.toLocaleDateString("ru", {day:     'numeric'});
+  weekday = this.today.toLocaleDateString("ru", {weekday: 'long'});
+  month   = this.today.toLocaleDateString("ru", {month:   'long'});
+  year    = this.today.toLocaleDateString("ru", {year:    'numeric'});
 }
