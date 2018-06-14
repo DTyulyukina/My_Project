@@ -14,10 +14,10 @@
           <div class="header-conteiner one">
           </div>
           <div class="header-conteiner two">
-            <ul class="list-headers">
+           <!-- <ul class="list-headers">
               <li class="header1">Еженедельное расписание</li>
               <li class="header1">Календарь</li>
-              <li class="header1">Заметки</li>
+              <li class="header1">Заметки</li>-->
             </ul>
           </div>
         </div>
@@ -26,8 +26,10 @@
             <day></day>
             <mounth></mounth>
           </div>
-          <div id="hours">  
-          </div>
+          <mwl-calendar-day-view
+            [viewDate]="viewDate"
+            [events]="events">
+          </mwl-calendar-day-view>
         </div>
         <div class="footer"></div>
       </div> 
