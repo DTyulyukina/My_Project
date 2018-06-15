@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
      
 @Component({ 
-  selector: 'mwl-demo-component',
+  selector: 'mwl-hourse-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<mwl-calendar-day-view
               [viewDate]     = "viewDate"

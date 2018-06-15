@@ -1,4 +1,4 @@
-import { Component,  Injectable} from '@angular/core';
+import { Component} from '@angular/core';
      
 @Component({ 
   selector: 'day',
@@ -10,18 +10,9 @@ import { Component,  Injectable} from '@angular/core';
              </div>`
 })
 export class DateToday{ 
-<<<<<<< HEAD
   today: Date = new Date();
-=======
-  today: Date = new Date;
->>>>>>> 8e4fe31838a55694327d310b1544134d1b301269
   day     = this.today.toLocaleDateString("ru", {day:     'numeric'});
   weekday = this.today.toLocaleDateString("ru", {weekday: 'long'});
   month   = this.today.toLocaleDateString("ru", {month:   'long'});
   year    = this.today.toLocaleDateString("ru", {year:    'numeric'});
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> 8e4fe31838a55694327d310b1544134d1b301269

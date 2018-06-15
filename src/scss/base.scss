@@ -64,10 +64,15 @@ body{
    height: 500px;
    padding: 45px;
    margin: 10px;
+   display: $Ldisplay;
+   display: -webkit-inline-box;
 
-   .days, 
-   .hours{
-    width: 100%;
+   .mounth{
+    padding-left: 70px;
+   }
+
+   .days{
+    width: 50%;
    }
 
    .hours{
@@ -94,11 +99,10 @@ body{
 
   .days{
     day{
-      padding: 20px;
       display: $Ldisplay;
       display: -webkit-inline-flex;
       font-style: italic;
-      margin-bottom: 50px;
+      width: 50%;
 
         #number-day{
         font-size: 70px;
