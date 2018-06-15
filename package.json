@@ -4,13 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "dev": "webpack-dev-server --hot --open",
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "dev": "webpack-dev-server --hot --open"
   },
   "private": true,
   "dependencies": {
