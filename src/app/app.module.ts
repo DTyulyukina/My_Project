@@ -4,17 +4,21 @@ import { BrowserModule }                    from '@angular/platform-browser';
 import { FormsModule }                      from '@angular/forms';
 import { CalendarModule }                   from 'angular-calendar';
 import { DateToday }                        from './dateToday.component';
+import { HourseToday }                      from './hourseToday.component';
 import                                      '../scss/base.scss';
 
 @NgModule({
-    imports: [  
+    imports: [ 
         BrowserModule, 
         FormsModule,
-        CommonModule],
+        CommonModule,
+        CalendarModule.forRoot()],
     declarations: [ 
-        DateToday],
+        DateToday,
+        HourseToday ],
     bootstrap: [ 
-        DateToday]
+        DateToday,
+        HourseToday]
 })
 
 export class AppModule {}
