@@ -1,6 +1,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8" />
+        <base href="/" />
         <title>Ежедневник</title>
     </head>
     <body>    
@@ -10,27 +11,10 @@
              Ежедневник
           </div>
         </div>
-        <div class="menu">
-          <div class="header-conteiner one">
-          </div>
-          <div class="header-conteiner two">
-            <ul class="list-headers">
-              <li class="header1" href="#index1">Еженедельное расписание</li>
-              <li class="header1">Календарь</li>
-              <!--<li class="header1">Заметки</li>-->
-            </ul>
-          </div>
+        <list-menu></list-menu>
+        <mwl-day-component></mwl-day-component>
+        <mwl-calendar-component></mwl-calendar-component>
         </div>
-        <div class="content">
-          <div class="days">
-            <day>Loading date of this day..</day>
-            <div class="hours">
-              <mwl-hourse-component>Loading hourse of day..</mwl-hourse-component>
-            </div>     
-          </div>
-          <!--<div class="mounth">
-            <mwl-calendar-component>Loading calendar of year..</mwl-calendar-component>
-          </div>-->
         </div>
         <div class="footer"></div>
       </div> 

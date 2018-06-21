@@ -1,25 +1,34 @@
 import { NgModule }                         from '@angular/core';
 import { CommonModule }                     from '@angular/common';
 import { BrowserModule }                    from '@angular/platform-browser';
-import { FormsModule }                      from '@angular/forms';
+import {Routes, RouterModule}               from '@angular/router';
 import { CalendarModule }                   from 'angular-calendar';
-import { DateToday }                        from './dateToday.component';
-import { Calendar }                         from './Calendar.component';
 import { HourseToday }                      from './hourseToday.component';
+import { Calendar }                         from './Calendar.component';
+import { Inventory }                        from './Inventory.component';
 import                                      '../scss/base.scss';
+
+// определение дочерних маршрутов
+const itemRoutes: Routes = [
+    { path: 'calendar-component', component: Calendar},
+    { path: 'day-component', component: HourseToday}
+];
+ 
+const appRoutes: Routes =[
+    { path: 'item/', component: Inventory},
+    { path: 'item/', component: Inventory, children: itemRoutes}
+];
 
 @NgModule({
     imports: [ 
         BrowserModule, 
-        FormsModule,
         CommonModule,
-        CalendarModule.forRoot()],
+        CalendarModule.forRoot(),
+        RouterModule.forRoot(appRoutes)],
     declarations: [ 
-        DateToday,
-        HourseToday ],
+        HourseToday, Calendar, Inventory ],
     bootstrap: [ 
-        DateToday,
-        HourseToday]
+        Inventory ]
 })
 
 export class AppModule {}
