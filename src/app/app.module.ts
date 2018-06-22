@@ -8,15 +8,15 @@ import { Calendar }                         from './Calendar.component';
 import { Inventory }                        from './Inventory.component';
 import                                      '../scss/base.scss';
 
-// определение дочерних маршрутов
 const itemRoutes: Routes = [
-    { path: 'calendar-component', component: Calendar},
-    { path: 'day-component', component: HourseToday}
+    { path: 'day-component',      component: HourseToday},
+    { path: 'calendar-component', component: Calendar}
 ];
  
 const appRoutes: Routes =[
     { path: 'item/', component: Inventory},
-    { path: 'item/', component: Inventory, children: itemRoutes}
+    { path: 'item/', component: Inventory, children: itemRoutes},
+    { path: '', component: Calendar}
 ];
 
 @NgModule({
@@ -26,9 +26,9 @@ const appRoutes: Routes =[
         CalendarModule.forRoot(),
         RouterModule.forRoot(appRoutes)],
     declarations: [ 
-        HourseToday, Calendar, Inventory ],
+        Inventory, HourseToday, Calendar],
     bootstrap: [ 
-        Inventory ]
+        Inventory, Calendar ]
 })
 
 export class AppModule {}

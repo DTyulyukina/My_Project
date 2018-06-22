@@ -4,7 +4,7 @@ import { ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
      
 @Component({ 
-  selector: 'mwl-day-component',
+  selector: 'day-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="content">
   <div class="days">

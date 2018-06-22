@@ -29,7 +29,7 @@ body{
   background: rgba(255,255,255,0.07);
   height: 70px;
 }
-.container{
+.container list{
   display: $LGdisplay;
   width: 100%;
   grid-template-columns: 20% 80%;
@@ -37,9 +37,37 @@ body{
   grid-template-areas: 
     "header menu"
     "content content"
-    "footer footer";
-}
+    "footer footer";}
 
+    calendar-component{
+      .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+      color: darkred;}
+    mwl-calendar-month-cell{
+      border: 1px solid #e1e1e1;}
+    .cal-month-view .cal-cell {
+      float: left;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 100px;}
+    .cal-month-view .cal-days {
+      border: 1px solid #e1e1e1;
+      border-bottom: 0;}
+    .cal-month-view .cal-cell-row {
+      display: flex;}
+    .cal-month-view .cal-cell-top {
+      min-height: 78px;
+      flex: 1;}
+    .cal-month-view .cal-day-number {
+      font-size: 1.2em;
+      font-weight: 400;
+      opacity: 0.5;
+      margin-top: 15px;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      float: right;
+    }}
 .menu{ 
   grid-area: menu; 
     .list-headers li{
@@ -49,7 +77,11 @@ body{
       -webkit-flex: 3 1 300px; 
       -ms-flex:  3 1 300px;
       margin: 0 10px;
-      padding: 10px;} 
+      padding: 10px;
+    a{color: #fff;text-shadow: #696969 0 0 2px;}  
+    a:link{text-decoration: none;} 
+    a:visited { text-decoration: none; } 
+    a:active { text-decoration: none; }} 
       
      & .header-conteiner { 
       display: $Fdisplay;
@@ -59,12 +91,18 @@ body{
       order: -1;
     }
 }
-.content{
-   grid-area: content;
+
+day-component,
+calendar-component{
+  grid-area: content;
    height: 500px;
    padding: 45px 15%;
    margin: 10px;
+} 
 
+.content{
+   color: #fff;
+   text-shadow: #696969 0 0 2px;
    .mounth{
     padding-left: 70px;
     width: 100%;
@@ -82,10 +120,14 @@ body{
         padding-top: 5px;
         width: 70px;
         text-align: center;}
-      .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
+      
+        day-component{
+          .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, 
+      .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
       border-bottom: thin dashed #e1e1e1; }
       .cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {
         display: none;}
+        }  
       mwl-demo-component{
         min-width: 200px;
         width: 100%;
