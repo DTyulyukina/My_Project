@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
+import { CalendarEvent } from 'angular-calendar';
      
 @Component({ 
   selector: 'week-component',
@@ -13,6 +13,5 @@ import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
 })
 
 export class Week {
-  view:     string = 'week';
-  viewDate: Date   = new Date();
+  viewDate: Date = new Date();
 }

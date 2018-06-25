@@ -6,7 +6,8 @@ import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="content">
                 <mwl-calendar-week-view
-                  [viewDate]="viewDate">
+                  [viewDate]="viewDate"
+                  [events]="events">
                 </mwl-calendar-week-view>
                 <mwl-calendar-month-view
                   [viewDate]="viewDate"
