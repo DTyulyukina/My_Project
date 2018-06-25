@@ -5,17 +5,19 @@ import {Routes, RouterModule}               from '@angular/router';
 import { CalendarModule }                   from 'angular-calendar';
 import { HourseToday }                      from './hourseToday.component';
 import { Calendar }                         from './Calendar.component';
+import { Week }                             from './Week.component';
 import { Inventory }                        from './Inventory.component';
 import                                      '../scss/base.scss';
 
-const itemRoutes: Routes = [
+/*const itemRoutes: Routes = [
     { path: 'day-component',      component: HourseToday},
+    { path: 'week-component',     component: Week},
     { path: 'calendar-component', component: Calendar}
-];
+];*/
  
 const appRoutes: Routes =[
     { path: 'item/', component: Inventory},
-    { path: 'item/', component: Inventory, children: itemRoutes},
+    { path: 'item/', component: Inventory},
     { path: '', component: Calendar}
 ];
 
@@ -26,9 +28,9 @@ const appRoutes: Routes =[
         CalendarModule.forRoot(),
         RouterModule.forRoot(appRoutes)],
     declarations: [ 
-        Inventory, HourseToday, Calendar],
+        Inventory, HourseToday, Calendar, Week],
     bootstrap: [ 
-        Inventory, Calendar ]
+        Inventory ]
 })
 
 export class AppModule {}

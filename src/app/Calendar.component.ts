@@ -3,20 +3,22 @@ import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
      
 @Component({ 
   selector: 'calendar-component',
-  //changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="content">
-              <mwl-calendar-month-view
-                [viewDate]="viewDate"
-                [events]="events"
-                [activeDayIsOpen]="true"
-                (beforeViewRender)="beforeMonthViewRender($event)">
-              </mwl-calendar-month-view>
+                <mwl-calendar-week-view
+                  [viewDate]="viewDate">
+                </mwl-calendar-week-view>
+                <mwl-calendar-month-view
+                  [viewDate]="viewDate"
+                  [events]="events"
+                  [activeDayIsOpen]="true"
+                  (beforeViewRender)="beforeMonthViewRender($event)">
+                </mwl-calendar-month-view>
              </div>`
 })
 
 export class Calendar {
   viewDate: Date = new Date();
-
   events: Array<CalendarEvent<{ incrementsBadgeTotal: boolean }>> = [
     {
       title: '',
