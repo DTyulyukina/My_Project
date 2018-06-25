@@ -47,7 +47,7 @@ body{
     .cal-month-view .cal-cell {
       float: left;
       flex: 1;
-      display: flex;
+      display: $Fdisplay;
       flex-direction: column;
       align-items: stretch;
       min-height: 100px;}
@@ -55,7 +55,7 @@ body{
       border: 1px solid #e1e1e1;
       border-bottom: 0;}
     .cal-month-view .cal-cell-row {
-      display: flex;}
+      display: $Fdisplay;}
     .cal-month-view .cal-cell-top {
       min-height: 78px;
       flex: 1;}
@@ -66,8 +66,7 @@ body{
       margin-top: 15px;
       margin-right: 15px;
       margin-bottom: 10px;
-      float: right;
-    }}
+      float: right;}}
 .menu{ 
   grid-area: menu; 
     .list-headers li{
@@ -96,7 +95,7 @@ day-component,
 calendar-component{
   grid-area: content;
    height: 500px;
-   padding: 45px 15%;
+   padding: 95px 15%;
    margin: 10px;
 } 
 
