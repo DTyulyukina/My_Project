@@ -9,9 +9,9 @@ template: `<div class="header">
               <div class="header-conteiner one"></div>
               <div class="header-conteiner two">
                  <ul class="list-headers">
-                   <li class="header1"><a routerLink="/item/day-component">Ежедневное расписание</a></li>
-                   <li class="header1"><a routerLink="/item/week-component">Еженедельное расписание</a></li>
-                   <li class="header1"><a routerLink="/item/calendar-component">Календарь</a></li>
+                   <li class="header1"><a routerLink="/day-component">Ежедневное расписание</a></li>
+                   <li class="header1"><a routerLink="/week-component">Еженедельное расписание</a></li>
+                   <li class="header1"><a routerLink="/calendar-component">Календарь</a></li>
                  </ul>
               </div>
            </div>

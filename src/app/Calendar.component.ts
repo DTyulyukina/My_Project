@@ -5,13 +5,8 @@ import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
   selector: 'calendar-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="content">
-                <mwl-calendar-week-view
-                  [viewDate]="viewDate"
-                  [events]="events">
-                </mwl-calendar-week-view>
                 <mwl-calendar-month-view
                   [viewDate]="viewDate"
-                  [events]="events"
                   [activeDayIsOpen]="true"
                   (beforeViewRender)="beforeMonthViewRender($event)">
                 </mwl-calendar-month-view>
@@ -23,19 +18,8 @@ export class Calendar {
   events: Array<CalendarEvent<{ incrementsBadgeTotal: boolean }>> = [
     {
       title: '',
-      //color: colors.yellow,
       start: new Date(),
-      meta: {
-        incrementsBadgeTotal: true
-      }
+      meta: { incrementsBadgeTotal: true}
     }
   ];
-
-  beforeMonthViewRender({ body }: { body: CalendarMonthViewDay[] }): void {
-    body.forEach(day => {
-      day.badgeTotal = day.events.filter(
-        event => event.meta.incrementsBadgeTotal
-      ).length;
-    });
-  }
 }

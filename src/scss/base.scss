@@ -97,7 +97,20 @@ calendar-component{
    height: 500px;
    padding: 95px 15%;
    margin: 10px;
-} 
+}
+
+day-component{
+  .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, 
+  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
+    border-bottom: thin dashed #e1e1e1; }
+  .cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {
+    display: none;}
+  .cal-day-view .cal-time {
+    font-weight: bold;
+    padding-top: 5px;
+    width: 70px;
+    text-align: center;}
+}
 
 .content{
    color: #fff;
@@ -105,32 +118,6 @@ calendar-component{
    .mounth{
     padding-left: 70px;
     width: 100%;
-   }
-
-   .hours{
-      width: 100%;
-      border: solid 1px #e1e1e1;
-      overflow-y: scroll;
-      height: 500px;
-      padding: 10px;
-      font-size: 16px;
-      .cal-day-view .cal-time {
-        font-weight: bold;
-        padding-top: 5px;
-        width: 70px;
-        text-align: center;}
-      
-        day-component{
-          .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, 
-      .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
-      border-bottom: thin dashed #e1e1e1; }
-      .cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {
-        display: none;}
-        }  
-      mwl-demo-component{
-        min-width: 200px;
-        width: 100%;
-      }
    }
 
   .days{
@@ -154,9 +141,15 @@ calendar-component{
 
         #attr-day{
         padding: 10px;}
-
     }
 
+    .hours{
+      width: 100%;
+      border: solid 1px #e1e1e1;
+      overflow-y: scroll;
+      height: 500px;
+      padding: 10px;
+      font-size: 16px;}  
   }
 }
 .footer{
