@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
      
 @Component({ 
   selector: 'day-component',
@@ -25,9 +24,9 @@ import {Subscription} from 'rxjs/Subscription';
   </div></div></div>`
 })
 export class HourseToday{
-  view:     string = 'day';
+  //view:     string = 'day';
   viewDate: Date   = new Date();
-  events:   CalendarEvent[] = [];
+  //events:   CalendarEvent[] = [];
 
   day     = this.viewDate.toLocaleDateString("ru", {day:     'numeric'});
   weekday = this.viewDate.toLocaleDateString("ru", {weekday: 'long'});
