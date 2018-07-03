@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarEvent, CalendarMonthViewDay } from 'angular-calendar';
+import { Day } from './Date';
      
 @Component({ 
   selector: 'calendar-component',
@@ -17,7 +18,7 @@ export class Calendar {
     {
       title: '',
       start: new Date(),
-      meta: { incrementsBadgeTotal: true}
+      meta: { incrementsBadgeTotal: true }
     }
   ];
 }
