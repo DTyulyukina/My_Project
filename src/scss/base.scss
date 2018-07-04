@@ -37,10 +37,19 @@ body{
   grid-template-areas: 
     "header menu"
     "content content"
-    "footer footer";}
-
+    "footer footer";
+  }
     calendar-component{
-      .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+      mwl-calendar-month-view-header{
+        .cal-cell-row .cal-header{
+          margin-left: 10%;
+          padding: 10px;
+          height: 35px;
+        .cal-cell .cal-past .cal-weekend{
+          margin: 56px;}
+        }
+      }
+    .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
       color: darkred;}
     mwl-calendar-month-cell{
       border: 1px solid #e1e1e1;}
@@ -66,7 +75,8 @@ body{
       margin-top: 15px;
       margin-right: 15px;
       margin-bottom: 10px;
-      float: right;}}
+      float: right;}
+    }
 .menu{ 
   grid-area: menu; 
     .list-headers li{
@@ -112,6 +122,17 @@ day-component{
     text-align: center;}
 }
 
+mwl-calendar-week-view{
+  .cal-day-headers{
+    flex: 1;
+    display: $Fdisplay;
+    align-content: center;
+  }
+  .cal-header .cal-past .cal-weekend{
+    padding: 10px;
+  }
+}
+
 .content{
    color: #fff;
    text-shadow: #696969 0 0 2px;
@@ -137,7 +158,7 @@ day-component{
         text-transform: capitalize;}
 
         #year-day{
-        font-size: 18px;}
+        font-size: 33px;}
 
         #attr-day{
         padding: 10px;}
