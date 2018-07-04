@@ -37,9 +37,9 @@ body{
   grid-template-areas: 
     "header menu"
     "content content"
-    "footer footer";
-  }
-    calendar-component{
+    "footer footer";}
+    
+  calendar-component{
       mwl-calendar-month-view-header{
         .cal-cell-row .cal-header{
           margin-left: 10%;
@@ -47,8 +47,8 @@ body{
           height: 35px;
         .cal-cell .cal-past .cal-weekend{
           margin: 56px;}
-        }
       }
+    }
     .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
       color: darkred;}
     mwl-calendar-month-cell{
