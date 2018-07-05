@@ -40,15 +40,13 @@ body{
     "footer footer";}
     
   calendar-component{
-      mwl-calendar-month-view-header{
         .cal-cell-row .cal-header{
+          text-align: center;
           margin-left: 10%;
           padding: 10px;
-          height: 35px;
+          height: 35px;}
         .cal-cell .cal-past .cal-weekend{
-          margin: 56px;}
-      }
-    }
+          margin: 56px;} 
     .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
       color: darkred;}
     mwl-calendar-month-cell{
@@ -109,6 +107,17 @@ calendar-component{
    margin: 10px;
 }
 
+.cal-week-view .cal-day-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  margin-bottom: 3px;
+  border: 1px solid #e1e1e1;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
 day-component{
   .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, 
   .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
@@ -120,59 +129,77 @@ day-component{
     padding-top: 5px;
     width: 70px;
     text-align: center;}
-}
 
-mwl-calendar-week-view{
-  .cal-day-headers{
-    flex: 1;
-    display: $Fdisplay;
-    align-content: center;
-  }
-  .cal-header .cal-past .cal-weekend{
-    padding: 10px;
-  }
-}
-
-.content{
-   color: #fff;
-   text-shadow: #696969 0 0 2px;
-   .mounth{
-    padding-left: 70px;
-    width: 100%;
-   }
-
-  .days{
-    width: 100%;
-    .day{
-      display: $Ldisplay;
-      display: -webkit-inline-flex;
-      font-style: italic;
-      width: 50%;
-
-        #number-day{
-        font-size: 70px;
-        padding: 10px;}
-
-        #day-of-week{
-        font-size: 16px;
-        text-transform: capitalize;}
-
-        #year-day{
-        font-size: 33px;}
-
-        #attr-day{
-        padding: 10px;}
+    mwl-calendar-week-view{
+      .cal-day-headers{
+        flex: 1;
+        display: $Fdisplay;
+        align-content: center;
+      }
+      .cal-header .cal-past .cal-weekend{
+        padding: 10px;
+      }
     }
-
-    .hours{
-      width: 100%;
-      border: solid 1px #e1e1e1;
-      overflow-y: scroll;
-      height: 500px;
-      padding: 10px;
-      font-size: 16px;}  
-  }
+    
 }
+
+
+week-component{
+  .cal-week-view .cal-day-headers .cal-header {
+    flex: 1; 
+    text-align: center;
+    padding: 5px; }
+  .cal-header .cal-past .cal-weekend{
+    border: 1px solid #e1e1e1;
+  }
+  .content{
+    width: 80%;
+    margin-top: 50px;}  
+}
+
+day-component{
+  .content{
+    color: #fff;
+    text-shadow: #696969 0 0 2px;
+    .mounth{
+     padding-left: 70px;
+     width: 100%;
+    }
+ 
+   .days{
+     width: 100%;
+     .day{
+       display: $Ldisplay;
+       display: -webkit-inline-flex;
+       font-style: italic;
+       width: 50%;
+ 
+         #number-day{
+         font-size: 70px;
+         padding: 10px;}
+ 
+         #day-of-week{
+         font-size: 16px;
+         text-transform: capitalize;}
+ 
+         #year-day{
+         font-size: 33px;}
+ 
+         #attr-day{
+         padding: 10px;}
+     }
+ 
+     .hours{
+       width: 100%;
+       border: solid 1px #e1e1e1;
+       overflow-y: scroll;
+       height: 500px;
+       padding: 10px;
+       font-size: 16px;}  
+   }
+ }
+}
+
 .footer{
   grid-area: footer;
 }
