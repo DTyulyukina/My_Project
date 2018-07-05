@@ -39,14 +39,11 @@ body{
     "content content"
     "footer footer";}
     
-  calendar-component{
-        .cal-cell-row .cal-header{
-          text-align: center;
-          margin-left: 10%;
-          padding: 10px;
-          height: 35px;}
-        .cal-cell .cal-past .cal-weekend{
-          margin: 56px;} 
+calendar-component{
+    mwl-calendar-month-view-header{
+      text-align: center;
+      padding: 10px;
+      height: 35px;}
     .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
       color: darkred;}
     mwl-calendar-month-cell{
@@ -57,7 +54,7 @@ body{
       display: $Fdisplay;
       flex-direction: column;
       align-items: stretch;
-      min-height: 100px;}
+      min-height: 10px;}
     .cal-month-view .cal-days {
       border: 1px solid #e1e1e1;
       border-bottom: 0;}
