@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { ActivatedRoute} from '@angular/router';
+import { Day } from './Date';
      
 @Component({ 
   selector: 'day-component',
@@ -19,7 +20,8 @@ import { ActivatedRoute} from '@angular/router';
     [viewDate]     = "viewDate"
     [hourSegments] = "5"
     [dayStartHour] = "9"
-    [dayEndHour]   = "18">
+    [dayEndHour]   = "18"
+    (click)="addNotes()">
   </mwl-calendar-day-view>
   </div></div></div>`
 })
@@ -32,4 +34,8 @@ export class HourseToday{
   weekday = this.viewDate.toLocaleDateString("ru", {weekday: 'long'});
   month   = this.viewDate.toLocaleDateString("ru", {month:   'long'});
   year    = this.viewDate.toLocaleDateString("ru", {year:    'numeric'});
+
+  addNotes(){
+    
+  }
 }

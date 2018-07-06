@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CalendarEvent} from 'angular-calendar';
+import { CalendarEvent, 
+  DAYS_OF_WEEK} from 'angular-calendar';
 //import { CustomDateFormatter } from './custom-date-formatter.provider';
      
 @Component({ 
@@ -7,7 +8,11 @@ import { CalendarEvent} from 'angular-calendar';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="content">
               <mwl-calendar-month-view
-              [viewDate]="viewDate">
+               [viewDate]="viewDate"
+               [events]="events"
+               [locale]="locale"
+               [weekStartsOn]="weekStartsOn"
+               [weekendDays]="weekendDays">
               </mwl-calendar-month-view>
              </div>`
 })
@@ -21,5 +26,7 @@ export class Calendar {
       meta: { incrementsBadgeTotal: true }
     }
   ];
-  locale: string = 'Ru';
+  //locale: string = 'ru';
+  weekStartsOn: number = DAYS_OF_WEEK.MONDAY;
+  weekendDays: number[] = [DAYS_OF_WEEK.FRIDAY, DAYS_OF_WEEK.SATURDAY];
 }
