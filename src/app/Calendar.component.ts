@@ -6,15 +6,9 @@ import { CalendarEvent,
 @Component({ 
   selector: 'calendar-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<div class="content">
-              <mwl-calendar-month-view
-               [viewDate]="viewDate"
-               [events]="events"
-               [locale]="locale"
-               [weekStartsOn]="weekStartsOn"
-               [weekendDays]="weekendDays">
-              </mwl-calendar-month-view>
-             </div>`
+  template: `<mwl-calendar-month-view
+               [viewDate]="viewDate">
+             </mwl-calendar-month-view>`
 })
 
 export class Calendar {
