@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { ActivatedRoute} from '@angular/router';
+import { BoldDirective} from './bold.directive';
 import {DataService} from './data.service';
 import { Day } from './Date';
      
@@ -26,8 +27,7 @@ import { Day } from './Date';
       (click)="addNotes()">
     </mwl-calendar-day-view>
     </div>
-  </div>
-</div>`,
+  </div></div>`,
   providers:   [DataService]
 })
 
@@ -42,11 +42,15 @@ export class HourseToday implements OnInit{
   year    = this.viewDate.toLocaleDateString("ru", {year:    'numeric'});
 
   items: Day[] = [];
-  constructor(private dataService: DataService){}     
-  addItem(day: Date, weekday: Date, month: Date, year: Date, 
+  constructor(private dataService: DataService){} 
+
+  addItem(day: Date, weekday: Date, 
+    month: Date, year: Date, 
     caption: string, text: string){
-    this.dataService.addData(day, weekday, month, year, 
+    this.dataService.addData(day, weekday, 
+      month, year, 
       caption, text);}
+
   ngOnInit(){
     this.items = this.dataService.getData();}
     

@@ -7,6 +7,7 @@ import { HourseToday }                      from './hourseToday.component';
 import { Calendar }                         from './Calendar.component';
 import { Week }                             from './Week.component';
 import { Inventory }                        from './Inventory.component';
+import { BoldDirective}                     from './bold.directive';
 import                                      '../scss/base.scss';
 
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
         CalendarModule.forRoot(),
         RouterModule.forRoot(appRoutes)],
     declarations: [ 
-        Inventory, HourseToday, Calendar, Week],
+        Inventory, HourseToday, Calendar, Week, 
+        BoldDirective],
     bootstrap: [ 
         Inventory ]
 })
