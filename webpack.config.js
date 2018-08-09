@@ -21,14 +21,21 @@ module.exports = {
     historyApiFallback: true,
   },
    resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js', '.json', '.html', '.scss', '.svg']
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
         loaders: ["style-loader", "css-loader", "sass-loader"]
-      },    
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        loader: 'file-loader?name=dist/assets/images/[name].[hash].[ext]'
+      },{
+        test: /\.html$/,
+        loader: 'html-loader'
+      },   
       {
         test: /\.ts$/, // определяем тип файлов
         use: [
