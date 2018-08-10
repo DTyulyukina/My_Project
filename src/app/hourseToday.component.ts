@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy} from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { ActivatedRoute} from '@angular/router';
-import { BoldDirective} from './bold.directive';
 import {DataService} from './data.service';
 import { Day } from './Date';
      

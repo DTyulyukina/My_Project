@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CalendarEvent, 
   DAYS_OF_WEEK} from 'angular-calendar';
 //import { CustomDateFormatter } from './custom-date-formatter.provider';
@@ -6,9 +6,14 @@ import { CalendarEvent,
 @Component({ 
   selector: 'calendar-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None, 
   template: `<mwl-calendar-month-view
                [viewDate]="viewDate">
-             </mwl-calendar-month-view>`
+             </mwl-calendar-month-view>`,
+  styles: [` mwl-calendar-month-cell .cal-cell 
+            .cal-day-cell .cal-today .cal-in-month{
+              background: #FF7259 !important; }`
+            ]
 })
 
 export class Calendar {
