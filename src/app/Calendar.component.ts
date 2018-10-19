@@ -9,11 +9,7 @@ import { CalendarEvent,
   encapsulation: ViewEncapsulation.None, 
   template: `<mwl-calendar-month-view
                [viewDate]="viewDate">
-             </mwl-calendar-month-view>`,
-  styles: [` mwl-calendar-month-cell .cal-cell 
-            .cal-day-cell .cal-today .cal-in-month{
-              background: #FF7259 !important; }`
-            ]
+             </mwl-calendar-month-view>`
 })
 
 export class Calendar {

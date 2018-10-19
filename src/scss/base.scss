@@ -22,7 +22,7 @@ body{
     font-size: 30px;
     background: rgba(255, 255, 255, 0.1);
     width: 149px;
-    text-shadow: #696969 0 0 2px;} 
+    text-shadow: #0c3 0 0 2px;} 
 }
 .header, 
 .menu{
@@ -70,7 +70,7 @@ calendar-component{
       margin-top: 15px;
       margin-right: 15px;
       margin-bottom: 10px;
-      float: right;}
+      float: right;} 
     }
 .menu{ 
   grid-area: menu; 
@@ -81,8 +81,9 @@ calendar-component{
       -webkit-flex: 3 1 300px; 
       -ms-flex:  3 1 300px;
       margin: 0 10px;
-      padding: 10px;
-    a{color: #fff;text-shadow: #696969 0 0 2px;}  
+      padding: 0px;
+    a{color: #fff;
+      text-shadow: #0c3 0 0 2px;}  
     a:link{text-decoration: none;} 
     a:visited { text-decoration: none; } 
     a:active { text-decoration: none; }} 
@@ -93,6 +94,10 @@ calendar-component{
       align-items: center;
       flex-direction: row-reverse;
       order: -1;
+    }
+
+    .list-headers li:nth-child(4){
+      vertical-align: middle;
     }
 }
 
